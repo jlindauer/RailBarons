@@ -1,0 +1,81 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/AbsoluteLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000" >
+    
+    <RelativeLayout
+	    android:id="@+id/trainView"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:background="#000000"
+	    android:orientation="horizontal" >
+    
+        <ScrollView
+	        android:id="@+id/newTrains"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent" >
+
+        	<LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:orientation="vertical"
+	            android:paddingTop="5dp" >
+	
+	            <TableLayout
+	                android:id="@+id/trainTable"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content" >
+	
+	            </TableLayout>
+            
+        	</LinearLayout>
+    	</ScrollView>
+
+    
+    	<ImageButton
+	        android:id="@+id/x_button"
+	        android:layout_width="60dp"
+	        android:layout_height="60dp"
+	        android:background="#00000000"
+	        android:onClick="backButton"
+	        android:scaleType="fitCenter"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentBottom="true"
+	        android:src="@drawable/xml_xbutton" />
+            
+            
+    </RelativeLayout>
+        
+	<RelativeLayout
+	    android:id="@+id/cityView"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:background="#000000"
+	    android:orientation="horizontal" >
+	
+	    <ScrollView
+	        android:id="@+id/currentCities"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent" >
+	
+	        <LinearLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical"
+	            android:paddingTop="5dp" >
+	
+	            <TableLayout
+	                android:id="@+id/cityTable"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content" >
+	
+	            </TableLayout>
+	            
+	        </LinearLayout>
+	    </ScrollView>
+	    
+	</RelativeLayout>
+        
+</AbsoluteLayout>

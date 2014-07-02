@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:clickable="false"
+    android:longClickable="false"
+    android:orientation="horizontal" >
+    
+  	<TextView
+	    android:id="@+id/textView1"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginTop="25dp"
+	    android:text="Congratulations!"
+	    android:textAppearance="?android:attr/textAppearanceLarge"
+	    android:textColor="@android:color/white" />
+
+	<TextView
+	    android:id="@+id/textView2"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/textView1"
+	    android:layout_centerHorizontal="true"
+	    android:text="You are a Novice Rail Baron!"
+	    android:textAppearance="?android:attr/textAppearanceLarge"
+	    android:textColor="@android:color/white" />
+
+	<ProgressBar
+	    android:id="@+id/progressBar1"
+	    style="?android:attr/progressBarStyleHorizontal"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/textView2"
+	    android:layout_centerHorizontal="true"
+	    android:minWidth="150dip"
+	    android:progress="20" />
+    
+	<RelativeLayout
+	    android:layout_width="wrap_content"
+	    android:layout_below="@+id/progressBar1"
+	    android:layout_height="wrap_content" >
+
+	    <ScrollView
+	        android:id="@+id/scrollingView"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_marginTop="25dp"
+	        android:fillViewport="false"
+	        android:scrollbars="vertical" >
+	    
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="234dp"
+	            android:gravity="center_horizontal"
+	            android:orientation="vertical"
+	            android:paddingTop="5dp" >
+			
+				<TableLayout
+				    android:id="@+id/statTable"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentLeft="true"
+				    android:layout_centerVertical="true" >
+				</TableLayout>
+			
+			</LinearLayout>
+			
+		</ScrollView>
+		
+	</RelativeLayout>
+	
+    <ImageButton
+		android:id="@+id/x_button"
+		android:layout_width="60dp"
+		android:layout_height="60dp"
+		android:background="#00000000"
+		android:onClick="backButton"
+		android:scaleType="fitCenter"
+		android:layout_alignParentRight="true"
+		android:layout_alignParentBottom="true"
+		android:src="@drawable/xml_xbutton" />
+
+</RelativeLayout>

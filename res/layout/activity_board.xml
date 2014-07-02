@@ -1,0 +1,176 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/AbsoluteLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000" >
+
+    <edu.cs307.railbarons.Board
+        android:id="@+id/boardGL1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="72dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/trainmanager_button"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:background="#00000000"
+            android:onClick="trainManager"
+            android:scaleType="fitCenter"
+            android:src="@drawable/xml_trainmanager" />
+
+        <ImageButton
+            android:id="@+id/tracks_button"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:background="#00000000"
+            android:onClick="tracks"
+            android:scaleType="fitCenter"
+            android:src="@drawable/xml_tracks" />
+
+        <ImageButton
+            android:id="@+id/market_button"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:background="#00000000"
+            android:onClick="marketSidebar"
+            android:scaleType="fitCenter"
+            android:src="@drawable/xml_market" />
+
+        <ImageButton
+            android:id="@+id/menu_button"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:background="#00000000"
+            android:onClick="menu"
+            android:scaleType="fitCenter"
+            android:src="@drawable/xml_menu" />
+        
+        <ImageButton
+            android:id="@+id/trainmarket_button"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:background="#00000000"
+            android:onClick="trainMarket"
+            android:scaleType="fitCenter"
+            android:src="@drawable/xml_trainmarket" />
+        
+        <ImageButton
+            android:id="@+id/carmarket_button"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:background="#00000000"
+            android:onClick="carMarket"
+            android:scaleType="fitCenter"
+            android:src="@drawable/xml_carmarket" />
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:background="#00000000"
+            android:onClick="baseSidebar"
+            android:scaleType="fitCenter"
+            android:src="@drawable/xml_back" />
+        
+        <ImageButton
+            android:id="@+id/confirm_button"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:background="#00000000"
+            android:onClick="confirmPath"
+            android:scaleType="fitCenter"
+            android:src="@drawable/xml_confirm_path" />
+        
+        <ImageButton
+            android:id="@+id/undo_button"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:background="#00000000"
+            android:onClick="undoSelection"
+            android:scaleType="fitCenter"
+            android:src="@drawable/xml_back" />
+        
+        <ImageButton
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:background="#00000000"
+            android:onClick="cancelSelection"
+            android:scaleType="fitCenter"
+            android:src="@drawable/xml_cancel_button" />
+    </LinearLayout>
+    
+    
+    <RelativeLayout
+	    android:id="@+id/trans_layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+		android:background="#C0C0C0"
+	    android:orientation="horizontal" >
+        
+    </RelativeLayout>
+    
+    
+    <RelativeLayout
+	    android:id="@+id/menu_layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="horizontal" >
+    
+        <LinearLayout
+	      android:layout_width="match_parent"
+	      android:layout_height="match_parent"
+	      android:gravity="center"
+	      android:orientation="vertical" >
+	
+	      <ImageButton
+	          android:layout_width="match_parent"
+	          android:layout_height="72dp"
+	          android:background="#00000000"
+	          android:scaleType="fitCenter"
+	          android:onClick="settings"
+	          android:src="@drawable/xml_settings" />
+	
+	      <ImageButton
+	          android:layout_width="match_parent"
+	          android:layout_height="72dp"
+	          android:background="#00000000"
+	          android:scaleType="fitCenter"
+	          android:onClick="newGame"
+	          android:src="@drawable/xml_newgame" />
+	      
+	      <ImageButton
+	          android:layout_width="match_parent"
+	          android:layout_height="72dp"
+	          android:background="#00000000"
+	          android:scaleType="fitCenter"
+	          android:onClick="statistics"
+	          android:src="@drawable/xml_statistics" />
+
+		</LinearLayout>
+        
+        
+		<ImageButton
+	        android:id="@+id/x_button"
+	        android:layout_width="60dp"
+	        android:layout_height="60dp"
+	        android:background="#00000000"
+	        android:onClick="backButton"
+	        android:scaleType="fitCenter"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentBottom="true"
+	        android:src="@drawable/xml_xbutton" />
+    
+</RelativeLayout>
+    
+    
+ 
+</AbsoluteLayout>

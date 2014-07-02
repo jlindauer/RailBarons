@@ -1,0 +1,288 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/AbsoluteLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000" >
+    
+    <RelativeLayout
+    android:id="@+id/mainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/station_smaller"
+    android:orientation="horizontal" >
+    
+            <ImageButton
+                android:id="@+id/cargo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#00000000"
+                android:onClick="pickCargo"
+                android:scaleType="fitCenter"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/crate" />
+            
+            <ImageButton
+                android:id="@+id/goButton"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:onClick="selectDestination"
+                android:scaleType="fitCenter"
+                android:layout_centerInParent="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/xml_go_button" />
+            
+            <ImageButton
+                android:id="@+id/passengers"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#00000000"
+                android:onClick="pickPassengers"
+                android:scaleType="fitCenter"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/sample_sprite" />
+            
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_marginTop="80dp"
+                android:orientation="horizontal" >
+        
+                <ImageButton
+                    android:id="@+id/left"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:background="#00000000"
+                    android:gravity="left"
+                    android:layout_weight="1"
+                    android:onClick="getLeftCar"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/xml_left" />
+                
+                <RelativeLayout
+                    android:id="@+id/carLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4" >
+                    
+                    <ImageView
+                            android:id="@+id/trainView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:scaleType="fitCenter" />
+                    
+                    <ImageView
+                            android:id="@+id/carItem1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/carItem2"
+                            android:layout_above="@+id/carItem4"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/cargo"
+                            android:scaleType="fitCenter" />
+                    
+                    <ImageView
+                            android:id="@+id/carItem2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/carItem3"
+                            android:layout_above="@+id/carItem5"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/cargo"
+                            android:scaleType="fitCenter" />
+                    
+                    <ImageView
+                            android:id="@+id/carItem3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/carItem6"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/cargo"
+                            android:scaleType="fitCenter" />
+                    
+                    <ImageView
+                            android:id="@+id/carItem4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/carItem5"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/cargo"
+                            android:scaleType="fitCenter" />
+                    
+                    <ImageView
+                            android:id="@+id/carItem5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/carItem6"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/cargo"
+                            android:scaleType="fitCenter" />
+                    
+                    <ImageView
+                            android:id="@+id/carItem6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/cargo"
+                            android:scaleType="fitCenter" />
+                    
+                    
+                </RelativeLayout>
+        
+                    <ImageButton
+                        android:id="@+id/right"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:background="#00000000"
+                        android:gravity="right"
+                        android:layout_weight="1"
+                        android:onClick="getRightCar"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/xml_right" />
+                
+                
+            </LinearLayout>
+            
+            <ImageButton
+                android:id="@+id/x_button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="#00000000"
+                android:onClick="backButton"
+                android:scaleType="fitCenter"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/xml_xbutton" />
+            
+            
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/addPassengers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:orientation="horizontal" >
+        
+            <ScrollView
+                android:id="@+id/newPassengers"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+        
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="5dp" >
+        
+                    <TableLayout
+                        android:id="@+id/passengerTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+        
+                    </TableLayout>
+                    
+                </LinearLayout>
+            </ScrollView>
+        
+            
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="#00000000"
+                android:onClick="closeSelector"
+                android:scaleType="fitCenter"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/xml_xbutton" />
+            
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/addCargo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:orientation="horizontal" >
+        
+            <ScrollView
+                android:id="@+id/newCargo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+        
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="5dp" >
+        
+                    <TableLayout
+                        android:id="@+id/cargoTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+        
+                    </TableLayout>
+                    
+                </LinearLayout>
+            </ScrollView>
+        
+            
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="#00000000"
+                android:onClick="closeSelector"
+                android:scaleType="fitCenter"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/xml_xbutton" />
+            
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/pickTrain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:orientation="horizontal" >
+            
+            <ScrollView
+		        android:id="@+id/newTrains"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent" >
+		
+		        <LinearLayout
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:orientation="vertical"
+		            android:paddingTop="5dp" >
+		
+		            <TableLayout
+		                android:id="@+id/trainTable"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content" >
+		
+		            </TableLayout>
+		            
+		        </LinearLayout>
+		    </ScrollView>
+		    
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="#00000000"
+                android:onClick="backButton"
+                android:scaleType="fitCenter"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/xml_xbutton" />
+            
+     	</RelativeLayout>
+
+        
+</AbsoluteLayout>
